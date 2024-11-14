@@ -9,12 +9,16 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-body {
-  background-color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-}
+/* testi */
 
+.testi{
+  background-color: rgb(218, 219, 219);
+border-radius:10px ;
+}
+.container-testi h2{
+  padding-top: 5vh;
+  text-align: center;
+}
 @media only screen and (max-width: 768px) {
   .container-testi {
     margin-top: 66px;
@@ -22,7 +26,7 @@ body {
 }
 
 .height {
-  height: 100vh;
+  height: 50vh;
 }
 
 .card {
