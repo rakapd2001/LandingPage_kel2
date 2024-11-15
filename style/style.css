@@ -11,11 +11,11 @@
 
 /* testi */
 
-.testi{
+.testi {
   background-color: rgb(218, 219, 219);
-border-radius:10px ;
+  border-radius: 10px;
 }
-.container-testi h2{
+.container-testi h2 {
   padding-top: 5vh;
   text-align: center;
 }
@@ -53,4 +53,118 @@ border-radius:10px ;
 
 .testimonials-margin {
   margin-top: -19px;
+}
+
+.team-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.team-card {
+  border-radius: 10px;
+}
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    #007bff 0%,
+    #0056b3 50%,
+    #003b80 100%
+  ); /* Gradien latar belakang */
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Bayangan teks */
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1.2s ease-in-out; /* Animasi masuk teks */
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fff;
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-animated:hover {
+  background-color: #fff;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btn-animated::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  transition: left 0.5s ease;
+}
+
+.btn-animated:hover::after {
+  left: 100%;
+}
+
+/* Animasi teks */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background dekoratif */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: moveCircle 10s infinite alternate ease-in-out;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: moveCircle 8s infinite alternate ease-in-out;
+}
+
+@keyframes moveCircle {
+  from {
+    transform: translate(10px, 10px);
+  }
+  to {
+    transform: translate(-10px, -10px);
+  }
 }
